@@ -68,7 +68,7 @@ int main()
         if(line.size()!=0){
             vector<string> tokens=split(line,' ');
             for(int i=0;i<tokens.size();i++){
-                bool flag=utility->isToken(tokens[i]);
+                bool flag=utility->isToken2(tokens[i]);
                 if(flag==false){
                     if(!isValid(tokens[i],separators)){
                         utility->printError("log.txt",lineIndex);

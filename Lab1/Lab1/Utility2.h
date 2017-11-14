@@ -1,7 +1,9 @@
 #include<bits/stdc++.h>
+#include"Automaton.h"
 using namespace std;
 class Utility2{
 private:
+    string removeFirst(string s,int k);
     bool isConstInteger(string s);
     bool isConstReal(string s);
     bool isConstChar(string s);
@@ -22,6 +24,14 @@ private:
     vector<string> split(string s, char d);
 
 public:
+    bool isConstInteger2(string s);
+    bool isConstReal2(string s);
+    bool isConstChar2(string s);
+    bool isConstString2(string s);
+
+    bool isConst2(string s);
+    bool isIdentifier2(string s);
+
     unordered_map<string,int> other;
     unordered_map<string,int> separators;
     vector<pair<int,int>> PIF;
@@ -31,6 +41,7 @@ public:
 
     Utility2(){};
     bool isToken(string s);
+    bool isToken2(string s);
     void print(string filename);
     void printError(string filename,int index);
 };

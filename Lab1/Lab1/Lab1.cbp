@@ -32,10 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Utility.cpp" />
-		<Unit filename="Utility.h" />
+		<Unit filename="Automaton.cpp" />
+		<Unit filename="Automaton.h" />
 		<Unit filename="Utility2.cpp" />
 		<Unit filename="Utility2.h" />
+		<Unit filename="dfaConsChar.in" />
+		<Unit filename="dfaConsFloat.in" />
+		<Unit filename="dfaConsString.in" />
+		<Unit filename="dfaIdentifier.in" />
 		<Unit filename="log.txt" />
 		<Unit filename="main.cpp" />
 		<Unit filename="other.txt" />

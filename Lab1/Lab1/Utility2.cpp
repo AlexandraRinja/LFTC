@@ -71,6 +71,20 @@ bool Utility2::isConstInteger(string s){
     }
     return true;
 }
+string Utility2::removeFirst(string s,int k){
+    string ans="";
+    for(int i=k;i<s.size();i++){
+        ans+=s[i];
+    }
+    return ans;
+}
+bool Utility2::isConstInteger2(string s){
+    Automaton* aut=new Automaton("dfaConsInteger.in");
+    if(s.size()==aut->longestValidPrefix(s,'S')){
+        return true;
+    }
+    return false;
+}
 bool Utility2::isConstReal(string s){
     vector<string> parts=split(s,'.');
     if(parts.size()!=2){
@@ -91,9 +105,33 @@ bool Utility2::isConstReal(string s){
     }
     return true;
 }
-
+bool Utility2::isConstReal2(string s){
+    Automaton* aut=new Automaton("dfaConsFloat.in");
+    if(s.size()==aut->longestValidPrefix(s,'S')){
+        return true;
+    }
+    return false;
+}
+bool Utility2::isConstChar2(string s){
+    Automaton* aut=new Automaton("dfaConsChar.in");
+    if(s.size()==aut->longestValidPrefix(s,'S')){
+        return true;
+    }
+    return false;
+}
+bool Utility2::isConstString2(string s){
+    Automaton* aut=new Automaton("dfaConsString.in");
+    if(s.size()==aut->longestValidPrefix(s,'S')){
+        return true;
+    }
+    return false;
+}
 bool Utility2::isConst(string s){
     return isConstInteger(s) || isConstReal(s) || isConstChar(s) ||isConstString(s);
+}
+
+bool Utility2::isConst2(string s){
+    return isConstInteger2(s) || isConstReal2(s) || isConstChar2(s) ||isConstString2(s);
 }
 
 bool Utility2::isIdentifier(string s){
@@ -112,6 +150,13 @@ bool Utility2::isIdentifier(string s){
         }
     }
     return true;
+}
+bool Utility2::isIdentifier2(string s){
+    Automaton* aut=new Automaton("dfaIdentifier.in");
+    if(s.size()==aut->longestValidPrefix(s,'S')){
+        return true;
+    }
+    return false;
 }
 bool Utility2::isSeparators(string s){
     if(separators.find(s)!=separators.end()){
@@ -159,6 +204,27 @@ bool Utility2::isToken(string s){
         return true;
     }
     if(isIdentifier(s)){
+        addIdentifier(s);
+        return true;
+    }
+    if(isOther(s)){
+        int code=other[s];
+        PIF.push_back(make_pair(code,0));
+        return true;
+    }
+    if(isSeparators(s)){
+        int code=separators[s];
+        PIF.push_back(make_pair(code,0));
+        return true;
+    }
+    return false;
+}
+bool Utility2::isToken2(string s){
+    if(isConst2(s)){
+        addConst(s);
+        return true;
+    }
+    if(isIdentifier2(s)){
         addIdentifier(s);
         return true;
     }
