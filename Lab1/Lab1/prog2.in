@@ -1,0 +1,21 @@
+#include<iostream>
+
+int main(){
+int N;
+std::cin>>N;
+
+float Sum;
+Sum=0;
+
+int I;
+I=0;
+
+while(I<N) {
+float Num;
+std::cin>>Num;
+Sum=Sum+Num;
+I=I+1;
+}
+
+std::cout<<Sum;
+}

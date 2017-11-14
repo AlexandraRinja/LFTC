@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1510080062 source:e:\sem5\limbaje formale si tehnici de compilare\lab1\lab1\main.cpp
+	<iostream>
+	"Utility2.h"
+
+1509552980 source:e:\sem5\limbaje formale si tehnici de compilare\lab1\lab1\utility.cpp
+	"Utility.h"
+
+1509537625 e:\sem5\limbaje formale si tehnici de compilare\lab1\lab1\utility.h
+	<bits/stdc++.h>
+
+1510079055 e:\sem5\limbaje formale si tehnici de compilare\lab1\lab1\utility2.h
+	<bits/stdc++.h>
+
+1510079022 source:e:\sem5\limbaje formale si tehnici de compilare\lab1\lab1\utility2.cpp
+	"Utility2.h"
+

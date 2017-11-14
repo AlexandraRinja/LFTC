@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1510102091 source:e:\sem5\limbaje formale si tehnici de compilare\lab2\lab2\main.cpp
+	<iostream>
+	"Automaton.h"
+
+1510139086 e:\sem5\limbaje formale si tehnici de compilare\lab2\lab2\automaton.h
+	<iostream>
+	<fstream>
+	<map>
+	<unordered_map>
+	<set>
+	<unordered_set>
+	<vector>
+
+1510139198 source:e:\sem5\limbaje formale si tehnici de compilare\lab2\lab2\automaton.cpp
+	"Automaton.h"
+

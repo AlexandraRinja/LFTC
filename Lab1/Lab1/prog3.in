@@ -1,0 +1,21 @@
+#include<iostream>
+
+int main(){
+int A;
+std::cin>>A;
+
+int B;
+std::cin>>B;
+
+while(A!=B){
+if(A>B){
+A=A-B;
+}
+else{
+B=B-A;
+}
+}
+
+std::cout<<A;
+}
+
